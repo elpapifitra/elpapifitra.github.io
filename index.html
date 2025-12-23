@@ -4,139 +4,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al Fitra Noor | Portfolio</title>
-    <meta name="description" content="Portfolio of Al Fitra Noor - Creative Designer and Strategist.">
-    <link rel="stylesheet" href="style.css">
-    <!-- Notion uses system fonts, but we can load Inter just in case for consistency across OS -->
+    <title>Al Fitra Noor | Creative Developer</title>
+    <meta name="description" content="Digital home of Al Fitra Noor. Creative developer and strategist.">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-        }
-    </style>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Breadcrumbs / Top Bar -->
-    <nav class="breadcrumbs">
-        <div style="display: flex; gap: 8px; align-items: center;">
-            <i class="fa-solid fa-cube"></i>
-            <span>vibecode</span>
-            <span style="color: #ccc;">/</span>
-            <span>Al Fitra Noor</span>
-        </div>
-    </nav>
-
-    <div class="notion-page">
-        <!-- Cover Art -->
-        <div class="cover-image"></div>
-
-        <div class="page-body">
-            <!-- Icon -->
-            <div class="page-icon">👨‍💻</div>
-
-            <!-- Title -->
-            <h1 class="page-title">Al Fitra Noor</h1>
-
-            <!-- Bio Callout -->
-            <div class="callout">
-                <div class="callout-icon">💡</div>
-                <div class="callout-content">
-                    <strong>Head of Media</strong> <a href="#" style="text-decoration: underline;">@ypiaorid</a> |
-                    <strong>Strategic Lead</strong> <a href="#" style="text-decoration: underline;">@muslimorid</a><br>
-                    Helping brands connect with people through meaningful experiences.
-                </div>
+    <main class="container">
+        <!-- 1. Hero Section -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Hi, I'm Fitra.</h1>
+                <p class="intro-text">
+                    I design, code, and lead strategic media initiatives. <br>
+                    Currently Head of Media <a href="#"
+                        style="text-decoration: underline; text-decoration-color: #ccc;">@ypiaorid</a> and Strategic
+                    Lead <a href="#" style="text-decoration: underline; text-decoration-color: #ccc;">@muslimorid</a>.
+                </p>
             </div>
+            <img src="profile.png" alt="Sketch of Al Fitra Noor" class="hero-image">
+        </section>
 
-            <!-- Portfolio Section -->
-            <h2>Portfolio</h2>
-            <div class="gallery">
-                <!-- Example Project 1 -->
-                <a href="#" class="gallery-card">
-                    <div class="card-cover"
-                        style="background-image: url('https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=400&q=80')">
+        <!-- 2. Bio Section -->
+        <section class="bio">
+            <p>I enjoy building thoughtful digital experiences, experimenting with code, and connecting brands with
+                people through meaningful interactions.</p>
+        </section>
+
+        <!-- 3. Links Section -->
+        <section class="links-section">
+            <div class="links-grid">
+                <!-- Project/Portfolio -->
+                <a href="#" class="link-card">
+                    <div class="link-content">
+                        <i class="fa-solid fa-folder-open link-icon"></i>
+                        <span class="link-title">Portfolio</span>
                     </div>
-                    <div class="card-content">
-                        <div class="card-title"><i class="fa-regular fa-file-code"></i> Project Alpha</div>
-                        <div class="card-tags">
-                            <span class="tag" style="background: rgba(235, 87, 87, 0.1); color: #eb5757;">Design</span>
-                            <span class="tag">Strategy</span>
-                        </div>
-                    </div>
+                    <i class="fa-solid fa-arrow-right link-arrow"></i>
                 </a>
 
-                <!-- Example Project 2 -->
-                <a href="#" class="gallery-card">
-                    <div class="card-cover"
-                        style="background-image: url('https://images.unsplash.com/photo-1555421689-491a97ff910f?auto=format&fit=crop&w=400&q=80')">
+                <!-- Vibe Coding / Experiments -->
+                <a href="#" class="link-card">
+                    <div class="link-content">
+                        <i class="fa-solid fa-flask link-icon"></i>
+                        <span class="link-title">Vibe Coding & Experiments</span>
                     </div>
-                    <div class="card-content">
-                        <div class="card-title"><i class="fa-solid fa-chart-pie"></i> Campaign 2024</div>
-                        <div class="card-tags">
-                            <span class="tag" style="background: rgba(46, 170, 220, 0.1); color: #2eaadc;">Media</span>
-                        </div>
-                    </div>
+                    <i class="fa-solid fa-arrow-right link-arrow"></i>
                 </a>
 
-                <!-- Example Project 3 -->
-                <a href="#" class="gallery-card">
-                    <div class="card-cover"
-                        style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80')">
+                <!-- GitHub -->
+                <a href="#" class="link-card">
+                    <div class="link-content">
+                        <i class="fa-brands fa-github link-icon"></i>
+                        <span class="link-title">GitHub</span>
                     </div>
-                    <div class="card-content">
-                        <div class="card-title"><i class="fa-solid fa-pen-nib"></i> Muslims Or Id Rebrand</div>
-                        <div class="card-tags">
-                            <span class="tag"
-                                style="background: rgba(233, 168, 0, 0.1); color: #d9730d;">Branding</span>
-                        </div>
+                    <i class="fa-solid fa-arrow-right link-arrow"></i>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="#" class="link-card">
+                    <div class="link-content">
+                        <i class="fa-brands fa-linkedin link-icon"></i>
+                        <span class="link-title">LinkedIn</span>
                     </div>
+                    <i class="fa-solid fa-arrow-right link-arrow"></i>
+                </a>
+
+                <!-- Instagram / X -->
+                <a href="#" class="link-card">
+                    <div class="link-content">
+                        <i class="fa-brands fa-instagram link-icon"></i>
+                        <span class="link-title">Instagram</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right link-arrow"></i>
                 </a>
             </div>
+        </section>
 
-            <!-- Experience Section -->
-            <h2>Experience</h2>
-            <div class="experience-list">
-                <div class="experience-item">
-                    <div class="role-company">
-                        <span style="border-bottom: 1px solid #ccc; padding-bottom: 1px;">Head of Media</span>
-                        <span style="color: var(--secondary-text);"> at YPIA</span>
-                    </div>
-                    <div class="date">Present</div>
-                </div>
-                <div class="experience-item">
-                    <div class="role-company">
-                        <span style="border-bottom: 1px solid #ccc; padding-bottom: 1px;">Strategic Lead</span>
-                        <span style="color: var(--secondary-text);"> at Muslim.or.id</span>
-                    </div>
-                    <div class="date">Present</div>
-                </div>
-                <div class="experience-item">
-                    <div class="role-company">
-                        <span>Creative Director</span>
-                        <span style="color: var(--secondary-text);"> at Freelance</span>
-                    </div>
-                    <div class="date">2021 - 2023</div>
-                </div>
+        <!-- 4. Footer -->
+        <footer>
+            <p>&copy; 2024 Al Fitra Noor.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
             </div>
+        </footer>
 
-            <!-- Get in touch -->
-            <h2>Contact</h2>
-            <p>Feel free to reach out for collaborations or just to say hi.</p>
-            <div class="social-links">
-                <a href="mailto:hello@example.com"><i class="fa-solid fa-envelope"></i> Email</a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
-            </div>
+    </main>
 
-        </div>
-    </div>
-
-    <!-- Minimal Script if needed -->
     <script src="script.js"></script>
 </body>
 

@@ -1,1 +1,1 @@
-console.log("Notion Portfolio Loaded");
+console.log("Vibe Coding Portfolio Loaded");

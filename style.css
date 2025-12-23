@@ -1,13 +1,19 @@
-/* Notion Style Reset & Variables */
+/* Vibe Coding Aesthetic */
+
 :root {
-    --bg-color: #ffffff;
-    --text-color: #37352f;
-    --secondary-text: #787774;
-    --link-color: #37352f;
-    --hover-bg: #f7f7f5; /* Light gray hover common in Notion */
-    --border-color: #e9e9e7;
-    --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-    --select-color: #2eaadc;
+    --bg-color: #FAFAF9;
+    /* Cream/Off-white */
+    --text-color: #1A1A1A;
+    --secondary-text: #666666;
+    --border-color: #E5E5E5;
+    --card-bg: #FFFFFF;
+    --accent-color: #333333;
+
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --container-width: 600px;
+    --spacing-unit: 20px;
 }
 
 * {
@@ -17,235 +23,176 @@
 }
 
 body {
-    font-family: var(--font-stack);
-    line-height: 1.5;
-    color: var(--text-color);
     background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-sans);
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-    font-size: 16px;
 }
 
 a {
-    color: inherit;
     text-decoration: none;
-    border-bottom: 1px solid rgba(55, 53, 47, 0.4);
-    transition: background-color 0.1s;
-}
-
-a:hover {
-    background-color: var(--hover-bg);
+    color: inherit;
+    transition: all 0.2s ease;
 }
 
 /* Layout */
-.notion-page {
-    max-width: 900px;
+.container {
+    max-width: var(--container-width);
     margin: 0 auto;
-    padding-bottom: 30vh;
+    padding: 80px 24px;
     display: flex;
     flex-direction: column;
+    gap: 60px;
 }
 
-/* Cover Image */
-.cover-image {
-    width: 100%;
-    height: 30vh;
-    min-height: 200px;
-    background-image: url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=2068&q=80'); /* Nature/Minimal placeholder */
-    background-size: cover;
-    background-position: center 30%;
-}
-
-.page-body {
-    padding: 0 96px; /* Notion desktop padding */
-    position: relative;
-    top: -46px; /* Pull up to overlap cover for icon */
-}
-
-/* Page Icon */
-.page-icon {
-    font-size: 78px;
-    width: 1em;
-    height: 1em;
-    margin-bottom: 8px;
-    line-height: 1;
-}
-
-/* Header */
-.page-title {
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 1.2;
-    margin-bottom: 8px;
-    color: var(--text-color);
-}
-
-.breadcrumbs {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 45px;
-    background: rgba(255, 255, 255, 0.9);
+/* Hero Section */
+.hero {
     display: flex;
     align-items: center;
-    padding: 0 16px;
-    font-size: 14px;
-    color: var(--secondary-text);
-    z-index: 100;
-    backdrop-filter: blur(4px);
-    border-bottom: 1px solid transparent;
-    transition: border-bottom 0.2s;
-}
-
-/* Typography & Blocks */
-h2 {
-    font-size: 1.5em;
-    font-weight: 600;
-    margin-top: 2em;
-    margin-bottom: 0.25em;
-    padding-bottom: 0.25em;
-    border-bottom: 1px solid var(--border-color);
-}
-
-h3 {
-    font-size: 1.25em;
-    font-weight: 600;
-    margin-top: 1.4em;
-    margin-bottom: 0.2em;
-}
-
-p {
-    margin-bottom: 0.5em; /* Notion paragraphs are tightish but distinct */
-    min-height: 1.5em;
-}
-
-/* Callout Block (Bio) */
-.callout {
-    display: flex;
-    padding: 16px 16px 16px 12px;
-    background: #f1f1ef; /* Notion gray background */
-    border-radius: 4px;
-    margin: 16px 0;
-    align-items: flex-start;
-}
-
-.callout-icon {
-    font-size: 24px;
-    margin-right: 12px;
-    user-select: none;
-    line-height: 1.3;
-}
-
-.callout-content {
-    color: var(--text-color);
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-/* Gallery (Portfolio) */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 16px;
-    margin-top: 16px;
-}
-
-.gallery-card {
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    overflow: hidden;
-    transition: background 0.1s, box-shadow 0.1s;
-    cursor: pointer;
-    text-decoration: none !important;
-    border-bottom: 1px solid var(--border-color) !important; /* Override link style */
-    display: block;
-    color: inherit;
-}
-
-.gallery-card:hover {
-    background: var(--hover-bg);
-}
-
-.card-cover {
-    height: 140px;
-    background-color: #f7f7f5;
-    background-size: cover;
-    background-position: center;
-}
-
-.card-content {
-    padding: 10px 12px;
-}
-
-.card-title {
-    font-weight: 500;
-    font-size: 15px;
-    margin-bottom: 4px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.card-tags {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-    margin-top: 8px;
-}
-
-.tag {
-    font-size: 12px;
-    padding: 2px 6px;
-    border-radius: 3px;
-    background: rgba(46, 170, 220, 0.2); /* Example tag color */
-    color: #207394;
-}
-
-/* List/Experience */
-.experience-item {
-    display: flex;
     justify-content: space-between;
-    padding: 6px 0;
-    border-bottom: 1px solid var(--border-color);
-    align-items: baseline;
+    gap: 40px;
 }
 
-.experience-item:last-child {
-    border-bottom: none;
+.hero-text {
+    flex: 1;
 }
 
-.role-company {
-    font-weight: 500;
+.hero-image {
+    width: 180px;
+    height: auto;
+    flex-shrink: 0;
+    /* Multiply blend mode makes the white background of the illustration transparent on off-white */
+    mix-blend-mode: multiply;
+    filter: contrast(1.1);
 }
 
-.date {
+h1 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: var(--text-color);
+    letter-spacing: -0.02em;
+}
+
+.intro-text {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
     color: var(--secondary-text);
-    font-size: 14px;
+    line-height: 1.6;
 }
 
-/* Footer / Socials */
-.social-links {
-    margin-top: 24px;
+/* Bio Section */
+.bio {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    border-left: 2px solid var(--border-color);
+    padding-left: 24px;
+}
+
+/* Links Section */
+.links-grid {
     display: flex;
-    gap: 12px;
+    flex-direction: column;
+    gap: 16px;
 }
 
-.social-links a {
+.link-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.link-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.04);
+    border-color: #d4d4d4;
+}
+
+.link-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.link-icon {
+    font-size: 1.25rem;
     color: var(--secondary-text);
-    font-size: 14px;
-    border-bottom: none;
-    padding: 4px 8px;
-    border-radius: 4px;
+    width: 24px;
+    text-align: center;
 }
 
-.social-links a:hover {
-    background: var(--hover-bg);
+.link-title {
+    font-weight: 500;
+    font-size: 1rem;
     color: var(--text-color);
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 700px) {
-    .page-body {
-        padding: 0 24px;
+.link-arrow {
+    color: var(--border-color);
+    transition: color 0.2s;
+}
+
+.link-card:hover .link-arrow {
+    color: var(--text-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.875rem;
+    color: var(--secondary-text);
+    opacity: 0.7;
+}
+
+.social-icons {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a:hover {
+    color: var(--text-color);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 40px 20px;
+        gap: 40px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        /* Image on top mobile or just stack standard */
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .hero-image {
+        width: 140px;
+        align-self: flex-start;
+        margin-bottom: -10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .bio {
+        font-size: 1.1rem;
+        padding-left: 16px;
     }
 }
